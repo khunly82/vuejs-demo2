@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-const name = ref<string>('Khun');
+import { defineProps } from 'vue';
+const name = defineProps<{name: string}>();
 </script>
 <template>
     <p>Hello {{name}} !!</p>
