@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import Hello from './components/Hello.vue';
+import Confirm from './components/Confirm.vue';
+const log = console.log;
 </script>
 
 <template>
-    <Hello name="Khun"></Hello>
-    <Hello name="Mike"></Hello>
-    <Hello name="Aude"></Hello>
+    <Confirm @click="e => log(e)"></Confirm>
 </template>
 
 <style scoped>
