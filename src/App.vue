@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import Confirm from './components/Confirm.vue';
-const log = console.log;
+import { ref, watchEffect } from 'vue';
+import Alert from './components/Alert.vue';
+const visible = ref<boolean>(false);
+watchEffect(() => {
+    console.log(visible.value)
+})
 </script>
 
 <template>
-    <Confirm @click="e => log(e)"></Confirm>
+    <button @click="visible = true">click me !!</button>
+    <Alert message="Attention !!" v-model:visible="visible"></Alert>
 </template>
-
 <style scoped>
 </style>
